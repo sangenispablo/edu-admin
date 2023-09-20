@@ -1,9 +1,9 @@
-import { Typography } from "@mui/material";
+import { HomeLayout } from "../layout/HomeLayout";
 
 export const HomePage = () => {
   return (
     <>
-      <Typography variant="h4">HomePage</Typography>
+      <HomeLayout />
     </>
   );
 };
