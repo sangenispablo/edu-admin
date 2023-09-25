@@ -5,9 +5,7 @@ import MuiDrawer from "@mui/material/Drawer";
 import {
   Badge,
   Box,
-  Container,
   Divider,
-  Grid,
   IconButton,
   List,
   Toolbar,
@@ -64,7 +62,7 @@ const Drawer = styled(MuiDrawer, {
   },
 }));
 
-export const HomeLayout = () => {
+export const HomeLayout = ({ children }) => {
   const [open, setOpen] = useState(true);
   const toggleDrawer = () => {
     setOpen(!open);
@@ -141,11 +139,7 @@ export const HomeLayout = () => {
         }}
       >
         <Toolbar />
-        <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-          <Grid container spacing={3}>
-            {/* aca va el contenido */}
-          </Grid>
-        </Container>
+        {children}
       </Box>
     </Box>
   );
